@@ -5,7 +5,7 @@ This project explores the visualization of the Palmer Penguins dataset (`penglin
 ## 1. R + ggplot2
 The baseline visualization was created using R and the `ggplot2` library. This method provided the design standard for the subsequent implementations.
 
-!R ggplot2 Screenshot
+![Screenshot of the R Visualization](./r_screenshot.png)
 
 - **Technical Achievement:** Used the `guides()` function to explicitly control legend ordering, ensuring "Species" and "Bill Length" appeared in the correct order.
 - **Design Achievement:** Implemented a custom color palette (`#fe9013`, `#9932cc`, `#018b8b`) and a clean grey background with white grid lines to set the project's visual standard.
@@ -13,7 +13,7 @@ The baseline visualization was created using R and the `ggplot2` library. This m
 ## 2. D3.js
 A web-based version built from scratch using SVG elements.
 
-!D3.js Screenshot
+![Screenshot of the D3 Visualization](./d3_screenshot.png)
 
 - **Technical Achievement:** Implemented complex axis logic using `tickValues` and `tickFormat` to display labels only on major increments (every 10 for X, every 1000 for Y) while maintaining minor grid lines. Managed SVG layering to ensure grid lines remained behind the data points.
 - **Design Achievement:** Replicated the `ggplot2` aesthetic exactly, including the specific grey background color and white grid line weights.
@@ -21,7 +21,7 @@ A web-based version built from scratch using SVG elements.
 ## 3. Python Turtle
 A low-level, procedural approach to data visualization.
 
-!Python Turtle Screenshot
+![Screenshot of the Turtle Visualization](./turtle_screenshot.png)
 
 - **Technical Achievement:** Developed a custom coordinate scaling system to map raw data values (ranging from 170-230 for flipper length and 2700-6300 for body mass) to the pixel-based Turtle canvas.
 - **Design Achievement:** Manually drew the background, axes, and labels using turtle movements, maintaining visual consistency with the high-level libraries.
@@ -29,14 +29,14 @@ A low-level, procedural approach to data visualization.
 ## 4. Altair (Python)
 A declarative statistical visualization library for Python.
 
-!Altair Screenshot
+![Screenshot of the Altair Visualization](./altair_screenshot.png)
 
 - **Technical Achievement:** Utilized Vega-Lite `labelExpr` to conditionally hide axis labels, achieving the specific "label every 10/1000" requirement while keeping the grid dense.
 - **Design Achievement:** Used `configure_view` and `configure_axis` to globalize the theme, ensuring the plot area and grid matched the project's visual identity.
 
 ## 5. SAS
 
-!Fifth Tool Screenshot
+![Screenshot of the SAS Visualization](./sas_screenshot.png)
 
 - **Technical Achievement:** iughoiugvb.
 - **Design Achievement:** hubihoghvbighu.
