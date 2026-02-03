@@ -3,7 +3,7 @@
 This project explores the visualization of the Palmer Penguins dataset (`penglings.csv`) using five different technologies. The goal was to create a consistent scatter plot across all platforms, mapping Flipper Length to the x-axis, Body Mass to the y-axis, Species to color, and Bill Length to point size.
 
 ## 1. R + ggplot2
-The baseline visualization was created using R and the `ggplot2` library. This method provided the design standard for the subsequent implementations.
+The baseline visualization was created using R and the `ggplot2` library. This method provided the design standard for the subsequent implementations. I found it simple and easy to use. This provides middle ground flexibility with some built in functionalities and also some ability to add custom features and styling. However, R is a less common language, which is a major pitfall of this method.
 
 ![Screenshot of the R Visualization](./r_screenshot.png)
 
@@ -11,7 +11,7 @@ The baseline visualization was created using R and the `ggplot2` library. This m
 - **Design Achievement:** Implemented a custom color palette (`#fe9013`, `#9932cc`, `#018b8b`) and a clean grey background with white grid lines to set the project's visual standard.
 
 ## 2. D3.js
-A web-based version built from scratch using SVG elements.
+A web-based version built from scratch using SVG elements. This was harder to use and more verbose, but provided much greater control of each individual method compared to some other methods. You can edit almost every part of a chart with no limits, but there is less built in support for generating a graph or visualization with low effort.
 
 ![Screenshot of the D3 Visualization](./d3_screenshot.png)
 
@@ -19,7 +19,7 @@ A web-based version built from scratch using SVG elements.
 - **Design Achievement:** Replicated the `ggplot2` aesthetic exactly, including the specific grey background color and white grid line weights.
 
 ## 3. Python Turtle
-A low-level, procedural approach to data visualization.
+A low-level, procedural approach to data visualization. Although it is easy to get started, it was very difficult to use because it isn't intended for representing any type of complex data and is primarily just a simple graphics and drawing option for people learning Python. I was unable to represent the opacity due to the simplicity of this program.
 
 ![Screenshot of the Turtle Visualization](./turtle_screenshot.png)
 
@@ -27,7 +27,7 @@ A low-level, procedural approach to data visualization.
 - **Design Achievement:** Manually drew the background, axes, and labels using turtle movements, maintaining visual consistency with the high-level libraries.
 
 ## 4. Altair (Python)
-A declarative statistical visualization library for Python.
+A declarative statistical visualization library for Python. To me, this was a lot like using R + ggplot, because it had a lot of built in functionality with ease of use and flexibility. However, Python is more widely known than R so I see this as a more useful tool. This does lack the abiilty to change every minute detail/be as granular as some other tools like D3.
 
 ![Screenshot of the Altair Visualization](./altair_screenshot.png)
 
@@ -35,38 +35,9 @@ A declarative statistical visualization library for Python.
 - **Design Achievement:** Used `configure_view` and `configure_axis` to globalize the theme, ensuring the plot area and grid matched the project's visual identity.
 
 ## 5. SAS
+I tried using SAS because I know it is used often in industry (specifically research/biostats) due to its high level of standardization and compatibility, and I already had some familiarity. It seems like the issue is always that SAS makes it very easy to make a plot, but very hard to customize it to be less cookie-cutter. Also, it is extremely picky about input. The dataset given doesn't represent missing data as a . which is standard for SAS, so I had to fix that.
 
 ![Screenshot of the SAS Visualization](./sas_screenshot.png)
 
-- **Technical Achievement:** iughoiugvb.
-- **Design Achievement:** hubihoghvbighu.
-
----
-
-## Overall Technical Achievements
-- **Cross-Platform Data Cleaning:** Handled `NA` values consistently across R, JavaScript, and Python to ensure data integrity in all plots.
-- **Asynchronous Loading:** Successfully implemented top-level `await` for CSV loading in the D3 module, avoiding common race conditions.
-- **Normalization Algorithms:** Created reusable logic for mapping quantitative variables to visual properties like circle radius and color hex codes across procedural and declarative tools.
-
-## Overall Design Achievements
-- **Visual Unity:** Despite using vastly different rendering engines (SVG, Canvas, Grid-based, Procedural), the final outputs maintain a unified "brand" through consistent use of typography, color, and spacing.
-- **Perceptual Sizing:** Fine-tuned the size scales in each tool so that the variation in Bill Length is visually distinct without causing excessive occlusion.
-- **Transparency for Density:** Applied a consistent 0.8 alpha transparency to all points, allowing the viewer to perceive data density in overlapping regions.
-
-## How to Run
-
-### R Method
-Open `r_method.rmd` in RStudio and knit to HTML.
-
-### D3 Method
-Host the directory locally (e.g., `python3 -m http.server`) and open `d3_method.html` in a browser.
-
-### Turtle Method
-Run `python turtle_method.py` from your terminal.
-
-### Altair Method
-Run `python altair_method.py` to generate `altair_method.html` and host locally.
-
-### R Method
-Open `sas_method.SAS` in SAS and run.
-```
+- **Technical Achievement:** Despite difficulties, I was able to change the size of each dot using bubble and was able to clean the data up to standard with SAS (which is very picky about input!)
+- **Design Achievement:** I was able to use `styleattrs` and `bubble` to format the chart with a theme closely resembling the example, matching the project's visual identity as closely as possible.
